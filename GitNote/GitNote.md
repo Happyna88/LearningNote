@@ -118,7 +118,9 @@
   * $ git config --global colur.ui true
   * $ .gitignore 文件，忽略某些文件
   * $ git config --global alias.NewName "Command"
-  * `$ (mine)git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit" (--global参数)`
+  * ```
+$ (mine)git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit" (--global参数)
+```
   * .git/config文件  （问题：已经设置了上面的alias，为什么config文件里没有列出来？在主目录下的.gitconfig文件里，该文件为当前用户的git配置文件)
   * 可以直接修改.git/config或者.gitconfig文件，增加、修改、删除都可以
 19. 搭建Git服务器
