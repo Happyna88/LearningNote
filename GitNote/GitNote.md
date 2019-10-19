@@ -122,7 +122,8 @@
   * $ .git/config文件  （问题：已经设置了上面的alias，为什么config文件里没有列出来？在主目录下的.gitconfig文件里，该文件为当前用户的git配置文件)
   * $ 可以直接修改.git/config或者.gitconfig文件，增加、修改、删除都可以
 19. 搭建Git服务器
-
+20. Markdown 语法
+	<https://blog.csdn.net/u014061630/article/details/81359144>
 
   
 
