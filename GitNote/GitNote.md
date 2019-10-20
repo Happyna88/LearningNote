@@ -13,7 +13,7 @@
   * $ git status         (随时查看仓库的状态，是否有修改的文件未add，是否有add的文件未commit)
   * $ git diff xxx.y     (xxx.y为查看status后发现修改过未add或commit的文件名，此命令可以显示未提交的文件修改了哪些地方)
 4. 查看修改历史
-  * $ git log            (打印出从近到远的修改历史)(有一个问题：一个仓库里有多个文件的话，只显示每次log的描述，并没有打印出是哪个文件的log，这个有点不好，怎么解决？)
+  * $ git log            (打印出从近到远的修改历史)(有一个问题：一个仓库里有多个文件的话，只显示每次log的描述，并没有打印出是哪个文件的log，这个有点不好，怎么解决？git log --name-only就会打印出对应每次commit的文件， 后面添加了lg别名，也可以加上--name-only,即git lg --name-only)
   * $ git log --pretty=oneline
 5. 版本穿梭 (修改的只是本地版本库）
   * $ git reset --hard HEAD^  (或者HEAD~5, 该命令是回到前面的版本）
@@ -54,9 +54,7 @@
   * git支持多种协议，包括https，但通过ssh支持的原生git协议速度最快，也就是上面的地址ssh为git@github.com:Happyna88/GitNote.git
 11. 本地与远程库的关联与取消
   * cd 到本地库所在位置，remote add origin执行一次就将该本地的工作区关联到了远程的位置，如果发现远程地址写错了，需要取消关联后再次关联，取消关联是git remote remove origin, 然后再次用git remote add origin ....就可以了。
-问题：如果本地库和远程库已经关联好了也同步了，后来本地或远程某一方做了修改，如何再次同步，或者如何查看某一方修改后修改的具体内容是什么？或者两者有冲突时如何处理？
-从本地到远程：git push git@github.com:Happyna88/xxx.git
-从远程到本地：https://blog.csdn.net/hanchao5272/article/details/79162130 
+  * 问题：如果本地库和远程库已经关联好了也同步了，后来本地或远程某一方做了修改，如何再次同步，或者如何查看某一方修改后修改的具体内容是什么？或者两者有冲突时如何处理？见下面。 
 12. 分支
   * $ git checkout -b dev ; git branch dev, git checkout dev
   * $ git branch 
@@ -124,7 +122,25 @@
 19. 搭建Git服务器
 20. Markdown 语法
   * `<https://blog.csdn.net/u014061630/article/details/81359144>`
-   
+21. Summary: log
+  * $ git log
+  * $ git log --name-only
+  * $ git log --pretty=oneline
+  * $ git log --graph --pretty=oneline --abbrev-commit
+  * $ git lg
+  * $ git reflog 
+22. Summary: reset
+  * $ git reset HEAD xxx.y
+  * $ git reset --hard HEAD^/commit_id/HEAD~n
+23. Summary: diff
+  * $ git diff xxx.y
+  * $ git diff HEAD -- xxx.y
+24. Summary: remote
+  * $ git remote add origin xxxx.git
+  * $ git remote remove origin
+  * $ git push -u origin master
+  * $ git push origin master/branch
+  * $ git clone xxx.git
 
 
   
